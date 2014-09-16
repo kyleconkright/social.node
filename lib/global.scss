@@ -1,0 +1,89 @@
+// VARIABLES
+$margin: 16px;
+$light: #ededed;
+$white:  #f6f6f6;
+$pink: #f1a1b3;
+$lightblue: lightblue;
+$dark: #26272b;
+$sfqblue: #91C3DD;
+$gyellow: #FFC627;
+
+$padding: 2%;
+
+* {
+	font-size: 103%;
+	color: inherit;
+	font-weight: 400;
+	font-family: Montserrat;
+	line-height: 1.25em;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	color: $dark;
+	background: $white;
+}
+
+#container {
+	height: 100%;
+	#g, #sfq {
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		h1 {
+			padding: $padding/2 $padding;
+			font-size: 2em;
+			text-transform: uppercase;
+		}
+		div.holder {
+			display: flex;
+			div {
+				flex: 1;
+				font-weight: 700;
+				letter-spacing: -.05em;
+				text-transform: uppercase;
+				padding: $padding;
+				i {
+					color: $white;
+					font-size: 2em;
+				}
+			}
+		}
+	}
+	#g {
+		div {
+			background: $gyellow;
+		}
+		div:nth-of-type(2n) {
+			background: $gyellow/.95;
+		}
+	}
+	#sfq {
+		div {
+			background: $sfqblue;
+		}
+		div:nth-of-type(2n+1) {
+			background: $sfqblue/.95;
+		}
+	}
+}
+
+
+@media only screen
+and (max-width : 980px)
+and (orientation: portrait) {
+
+
+}
