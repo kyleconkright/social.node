@@ -4,7 +4,7 @@ $light: #ededed;
 $white:  #f6f6f6;
 $pink: #f1a1b3;
 $lightblue: lightblue;
-$dark: #26272b;
+$dark:  #303030;
 $sfqblue: #91C3DD;
 $gyellow: #FFC627;
 
@@ -13,7 +13,6 @@ $padding: 2%;
 * {
 	font-size: 103%;
 	color: inherit;
-	font-weight: 400;
 	font-family: Montserrat;
 	line-height: 1.25em;
 	padding: 0;
@@ -33,6 +32,7 @@ body, html {
 body {
 	color: $dark;
 	background: $white;
+	font-weight: 400;
 }
 
 #container {
@@ -41,6 +41,7 @@ body {
 		height: 50%;
 		display: flex;
 		flex-direction: column;
+		font-weight: 700;
 		// justify-content: center;
 		h1 {
 			padding: $padding/2 $padding;
@@ -52,12 +53,38 @@ body {
 			div {
 				flex: 1;
 				font-weight: 700;
-				letter-spacing: -.05em;
+				letter-spacing: -.075em;
 				text-transform: uppercase;
 				padding: $padding;
+				div.count {
+					display: flex;
+					p {
+						flex: 1;
+						i {
+							font-size: .75em;
+							margin: 0 3px 0;
+							color: inherit;
+							position: relative;
+							top: -2px;
+						}
+					}
+					p:nth-of-type(2) {
+						text-align: right;
+					}
+				}
 				i {
 					color: $white;
 					font-size: 2em;
+				}
+				div.params {
+					display: flex;
+					background: none;
+					a {
+						flex: 1;
+						font-size: .75em;
+						padding: $padding $padding*3;
+						opacity: .25;
+					}
 				}
 			}
 		}
@@ -82,8 +109,7 @@ body {
 
 
 @media only screen
-and (max-width : 980px)
+and (min-width : 768px)
 and (orientation: portrait) {
-
 
 }
