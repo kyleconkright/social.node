@@ -50,6 +50,7 @@ body {
 		}
 		div.holder {
 			display: flex;
+			font-size: 1.5em;
 			div {
 				flex: 1;
 				font-weight: 700;
@@ -81,28 +82,36 @@ body {
 					background: none;
 					a {
 						flex: 1;
-						font-size: .75em;
+						font-size: .5em;
 						padding: $padding $padding*3;
 						opacity: .25;
+						text-align: center;
+					}
+					a.select {
+						opacity: 1;
+						background: rgba(255,255,255,.35);
+						border-radius: 2px;
 					}
 				}
 			}
 		}
 	}
 	#g {
-		div {
+		div.social {
 			background: $gyellow;
 		}
-		div:nth-of-type(2n) {
+		div.social:nth-of-type(2n) {
 			background: $gyellow/.95;
 		}
 	}
 	#sfq {
-		div {
-			background: $sfqblue;
-		}
-		div:nth-of-type(2n+1) {
-			background: $sfqblue/.95;
+		div.holder {
+			div.social {
+				background: $sfqblue;
+			}
+			div.social:nth-of-type(2n+1) {
+				background: $sfqblue/.95;
+			}
 		}
 	}
 }
