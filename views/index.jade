@@ -1,107 +1,27 @@
 extends layout
 
 block content
-	div#container
-		div#g
-			h1 G-Project
-			div.holder
-				div.social
-					i.fa.fa-twitter
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-instagram
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-pinterest
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-facebook
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
 
-		div#sfq
-			h1 Soundfreaq
-			div.holder
-				div.social
-					i.fa.fa-twitter
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-instagram
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-pinterest
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
-				div.social
-					i.fa.fa-facebook
-					div.count
-						p 1,000
-						p
-							i.fa.fa-arrow-up
-							|10
-					div.params
-						a.select(href='#') 1
-						a(href='#') 7
-						a(href='#') 30
-						a(href='#') 365
+	- profiles = ['G-Project','Soundfreaq']
+	- socials = ['twitter','instagram','pinterest','facebook']
+
+	div#container
+
+		- each profile in profiles
+
+			div(id='#{profile}')
+				h1= profile
+				div.holder
+					- each social in socials
+						div.social
+							i(class='fa fa-#{social}')
+							div.count
+								p 1,000
+								p
+									i.fa.fa-arrow-up
+									|10
+							div.params
+								a.select(href='#') 1
+								a(href='#') 7
+								a(href='#') 30
+								a(href='#') 365
