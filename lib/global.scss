@@ -74,8 +74,8 @@ body {
 					}
 				}
 				i {
-					color: $white;
-					font-size: 2em;
+					color: rgba(255,255,255,.75);
+					font-size: 1.25em;
 				}
 				div.params {
 					display: flex;
@@ -101,7 +101,7 @@ body {
 			background: $gyellow;
 		}
 		div.social:nth-of-type(2n) {
-			background: $gyellow/.95;
+			background: $gyellow/.97;
 		}
 	}
 	#Soundfreaq {
@@ -110,7 +110,7 @@ body {
 				background: $sfqblue;
 			}
 			div.social:nth-of-type(2n+1) {
-				background: $sfqblue/.95;
+				background: $sfqblue/.97;
 			}
 		}
 	}
